@@ -30,3 +30,34 @@ const Array2 = ["りんご","みかん","スイカ"]
  const array9 = ["りんご","みかん","めろん","いちご","すいか"]
  const array10 = array9.slice(2,4)
  console.log(array10)
+
+ //配列のフィルタリング(filter)ーー任意の要素以外の配列を出力ーー
+ const array11 = ["りんご","みかん","めろん","いちご","すいか"]
+ const array12 = array11.filter(function(fruit){
+   return fruit !=="めろん"
+ })
+ console.log(array12)
+
+ //配列のフィルタリング(filter)ーー任意の要素配列を出力ーー
+ const array13 = ["りんご","みかん","めろん","いちご","すいか"]
+ const array14 = array13.filter(function(fruit){
+   return fruit ==="めろん"  
+ })
+ console.log(array14)
+
+ //filterとsearchメソッド
+ const array15 = ["りんご","みかん","めろん","いちご","すいか"]
+ const array16 = array15.filter(function(fruit){
+   return fruit.search("ん") !== -1    //!== -1がないと”ん”を含む抽出されない 
+ })
+ console.log(array16)
+
+ //一致する項目の最初に一致した位置を表示
+ const array17 = ["りんご","いちご","めろん","いちご","すいか"]
+ const array18 = array17.indexOf("いちご")  //index0fは大文字のoを使用
+ console.log(array18)
+
+ //一致する項目の最後の位置を表示
+ const array19 = ["りんご","いちご","めろん","いちご","すいか"]
+ const array20 = array19.lastIndexOf("いちご")  //index0fは大文字のoを使用
+ console.log(array20)
